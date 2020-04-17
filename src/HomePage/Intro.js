@@ -4,6 +4,7 @@ import Description from './Description';
 import ActivityBtn from './ActivityBtn';
 import MiniHeading from './MiniHeading';
 import MiniDesc from './MiniDesc';
+import Stat from './Stat';
 
 class Intro extends Component {
   render() {
@@ -32,6 +33,10 @@ class Intro extends Component {
       paddingBottom: "50px"
     }
 
+    let numInfo={
+      color: "white"
+    }
+
     return (
       <div>
         <div style={styles}>
@@ -41,6 +46,9 @@ class Intro extends Component {
           <div className="container" style={container}>
             <ActivityBtn content="Indoor"/>
             <ActivityBtn content="Outdoor"/>
+          </div>          
+          <div style={numInfo}>
+            <Stat content="number"/>
           </div>
         </div>
         <div style={info}>
