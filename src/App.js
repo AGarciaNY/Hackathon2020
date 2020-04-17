@@ -1,17 +1,29 @@
-import React from 'react';
-import logo from './Icons/Virus.png';
-import './App.css';
-import Intro from './HomePage/Intro.js'
+import React,{Component} from 'react';
+import Inside from './activity/inside';
+import Nav from './nav/nav';
+import Intro from './homepage/Intro';
 
-function App() {
-  return (
-    <div className="App">
-      <div className="logo-container">
-        <img src={logo} className="App-logo" alt="logo" />
+export default class App extends Component{
+  
+  constructor() {
+    super();
+    this.state = {
+      pickapage: 'home',
+    }
+  }
+
+  pickAPage = (page) => {
+    this.setState({
+      pickapage: page
+    });
+  }
+  render(){
+    return (
+      <div className="App">
+        <Nav/>
+        <Intro/>
       </div>
-      <Intro/>
-    </div>
-  );
+    );
+  }
 }
 
-export default App;
