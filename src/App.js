@@ -1,29 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
 import Inside from './activity/inside';
 import Nav from './nav/nav';
-function App() {
-  return (
-    <div className="App">
-      <Nav/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Inside/>
-      </header>
-    </div>
-  );
+import Intro from './homepage/Intro';
+
+export default class App extends Component{
+  
+  constructor() {
+    super();
+    this.state = {
+      pickapage: 'home',
+    }
+  }
+
+  pickAPage = (page) => {
+    this.setState({
+      pickapage: page
+    });
+  }
+  render(){
+    return (
+      <div className="App">
+        <Nav/>
+        <Intro/>
+      </div>
+    );
+  }
 }
 
-export default App;
