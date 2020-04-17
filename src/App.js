@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import Inside from './activity/inside';
+import Outside from './activity/outside/outside';
 import Nav from './nav/nav';
 import Intro from './homepage/Intro';
 
@@ -21,7 +21,7 @@ export default class App extends Component{
     return (
       <div className="App">
         <Nav/>
-        <Intro/>
+        <Outside/>
       </div>
     );
   }
