@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Inside from './activity/inside';
+import Nav from './nav/nav';
 function App() {
   return (
     <div className="App">
+      <Nav/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <Inside/>
       </header>
     </div>
   );
