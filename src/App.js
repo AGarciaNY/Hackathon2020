@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import Inside from './activity/inside';
 import Nav from './nav/nav';
-import Intro from './homepage/Intro';
+import Intro from './HomePage/Intro';
 
 export default class App extends Component{
   

@@ -6,6 +6,7 @@ class MiniHeading extends Component{
             fontSize: "300%",
             textAlign: "left",
             marginLeft: "10vw",
+            marginTop: "0px",
             paddingTop: "100px"
         }
 
