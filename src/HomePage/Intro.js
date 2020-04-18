@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
+import styled from '@emotion/styled';
+
 import Heading from "./Heading";
 import Description from './Description';
-import ActivityBtn from './ActivityBtn';
+
 import MiniHeading from './MiniHeading';
 import MiniDesc from './MiniDesc';
 import Stat from './Stat';
 
+const ActivityBtn = styled.button`
+  fontsize: 100%;
+  min-width: 100px;
+  border:2px solid blue;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+`;
 class Intro extends Component {
   render() {
     let styles={
@@ -44,8 +55,8 @@ class Intro extends Component {
           <Description content="A week long Hackathon project made by [place names here later]. We seek to provide relief for those
               suffering through these tough times one way or another"/>
           <div className="container" style={container}>
-            <ActivityBtn content="Indoor" onClick={() => this.props.changepage('Inside')}/>
-            <ActivityBtn content="Outdoor" onClick={() => this.props.changepage('Outside')}/>
+            <ActivityBtn  onClick={()=> this.props.changepage('Inside')}>Indoor</ActivityBtn>
+            <ActivityBtn  onClick={()=> this.props.changepage('Outside')}>Outdoor</ActivityBtn>
           </div>          
           <div style={numInfo}>
             <Stat content="number"/>

@@ -16,7 +16,7 @@ class Projects {
 }
 
 let insideactivitys = [
-   new Projects("testing",["Aldair"],"ho there","https://agarciany.github.io/piglaten/","https://i.imgur.com/CScNoZw.pngs"),
+   new Projects("testing",["Aldair"],"ho there outside","https://agarciany.github.io/piglaten/","https://i.imgur.com/CScNoZw.pngs"),
 
 ];
 console.log(insideactivitys);

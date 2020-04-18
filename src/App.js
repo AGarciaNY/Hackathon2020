@@ -15,6 +15,7 @@ export default class App extends Component{
   }
 
   pickAPage = (page) => {
+    console.log('clicked')
     this.setState({
       pickapage: page
     });

@@ -73,7 +73,7 @@ const TextFont = styled.button`
   background:silver;
   width: 140px;
   height:30px;
-  z-index: 1;
+  z-index: 2;
   border-radius: 20px;
   text-decoration: none;
   color:white;
@@ -81,9 +81,10 @@ const TextFont = styled.button`
 
   &:hover{
     position:absolute;
+    top:-5px;
     left:-10px;
     width: 160px;
-    height:35px;
+    height:40px;
     font-size:18px;
   }
 `;
@@ -98,9 +99,11 @@ const Text = styled.div`
   height:30px;
   margin:3px 0;
   position:relative;
+  z-index:2;
 
   &:hover{
     margin:5px 0;
+    
   }
 `;
 
@@ -126,8 +129,8 @@ export default class Nav extends Component{
           </DropDown>
         </Right>
         <Right>
-          <Links onClick={() => this.props.changepage('projects')}>Projects</Links>
-          <Links onClick={() => this.props.changepage('artwork')}>Art Work</Links>
+          <Links onClick={() => this.props.changepage('Outside')}>Outside</Links>
+          <Links onClick={() => this.props.changepage('Inside')}>Inside</Links>
           <Links onClick={() => this.props.changepage('home')}>Home</Links>
         </Right>
       </LinkHolder>
