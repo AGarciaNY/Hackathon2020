@@ -18,7 +18,6 @@ class Projects {
 }
 
 
-
 async function content(){
   
   //most viewed new york times articles
