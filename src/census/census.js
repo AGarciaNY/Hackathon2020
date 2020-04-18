@@ -25,7 +25,7 @@ const Holder =styled.div`
 `;
 const Textholder =styled.div`
   position:relative;
-  left:40px;
+  padding:40px;
 `;
 const Points =styled.div`
   position:relative; 
