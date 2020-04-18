@@ -42,7 +42,7 @@ async function content(){
   .then((response)=>{
       // console.log("books to read",response.results.books);
       for(let i=0; i<response.results.books.length;i++){
-          insideactivitys.push(new Projects(response.results.books[i].title, ["Jason"], response.results.books[i].description, response.results.books[i].url, response.results.books[i].book_image));
+          insideactivitys.push(new Projects(response.results.books[i].title, ["Jason"], response.results.books[i].description, response.results.books[i].buy_links[0].url, response.results.books[i].book_image));
       }
       return response.results.books;
   })
