@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 
 import Heading from "./Heading";
 import Description from './Description';
-
 import MiniHeading from './MiniHeading';
 import MiniDesc from './MiniDesc';
 import Stat from './Stat';
@@ -17,19 +16,18 @@ const ActivityBtn = styled.button`
   color: white;
   padding: 5px 10px;
 `;
-class Intro extends Component {
+const Holder= styled.div`
+  position: relative;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+export default class Intro extends Component {
   render() {
-    let styles={
-      position: "relative",
-      backgroundColor: "black",
-      color: "white",
-      height: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-    }
-
     let container={
       marginTop: "5vh",
       display: "flex",
@@ -50,7 +48,7 @@ class Intro extends Component {
 
     return (
       <div>
-        <div style={styles}>
+        <Holder>
           <Heading content="The fight against corona"/>
           <Description content="A week long Hackathon project made by [place names here later]. We seek to provide relief for those
               suffering through these tough times one way or another"/>
@@ -61,7 +59,7 @@ class Intro extends Component {
           <div style={numInfo}>
             <Stat content="number"/>
           </div>
-        </div>
+        </Holder>
         <div style={info}>
           <MiniHeading content="About"/>
           <MiniDesc content="Life's hard, let's make it easier! Need stuff to do, just decide whether you want to do stuff inside
@@ -76,4 +74,3 @@ class Intro extends Component {
   }
 }
 
-export default Intro;
