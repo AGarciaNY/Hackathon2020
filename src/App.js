@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 
 import Outside from './activity/outside/outside';
 import Nav from './nav/nav';
-import Intro from './homepage/Intro';
 import Inside from './activity/inside/inside'
+import Intro from './HomePage/Intro';
 
 export default class App extends Component{
   
