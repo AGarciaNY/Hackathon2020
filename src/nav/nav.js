@@ -1,7 +1,11 @@
 import React,{Component} from 'react';
 import styled from '@emotion/styled';
 
-const Navcontainer = styled.div`
+const Navcontainer = styled("header")`
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
   height: 70px;
   background: linear-gradient(black,#4c4c4c, transparent);
   color: white;
