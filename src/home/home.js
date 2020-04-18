@@ -23,7 +23,7 @@ class Intro extends Component {
       position: "relative",
       backgroundColor: "black",
       color: "white",
-      height: "100vh",
+      height: "90vh",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",

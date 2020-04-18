@@ -38,10 +38,7 @@ async function content(){
 
 content();
 
-let insideactivitys = [
-   new Projects("testing",["Aldair"],"ho there outside","https://agarciany.github.io/piglaten/","https://i.imgur.com/CScNoZw.pngs"),
-
-];
+let insideactivitys = [];
 console.log(insideactivitys);
 export default insideactivitys;
   
