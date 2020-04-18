@@ -4,13 +4,13 @@ import Outside from './activity/outside/outside';
 import Nav from './nav/nav';
 import Inside from './activity/inside/inside';
 import Intro from './home/home';
-
+import Census from './census/census';
 export default class App extends Component{
   
   constructor() {
     super();
     this.state = {
-      pickapage: 'home',
+      pickapage: 'Census',
     }
   }
 
@@ -45,6 +45,14 @@ export default class App extends Component{
         <div id="body">
           <Nav changepage={(page)=> this.pickAPage(page)}/>
           <Inside />
+        </div>
+      )
+    }
+    if(this.state.pickapage === 'Census'){
+      return (
+        <div>
+          <Nav changepage={(page)=> this.pickAPage(page)}/>
+          <Census/>
         </div>
       )
     }

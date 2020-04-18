@@ -16,8 +16,7 @@ class Projects {
 }
 
 let insideactivitys = [
-   new Projects("testing",["Aldair"],"ho there","https://agarciany.github.io/piglaten/","https://i.imgur.com/CScNoZw.pngs"),
-
+  new Projects("Hangman",["Aldair"],"testing","https://agarciany.github.io/Hangman/","https://i.imgur.com/yXijUj2.png"),
 ];
 console.log(insideactivitys);
 export default insideactivitys;

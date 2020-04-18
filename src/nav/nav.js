@@ -5,9 +5,11 @@ const Navcontainer = styled("header")`
   position: sticky;
   top: 0;
   z-index: 10;
+  border:2px solid blue;
+  border-radius: 4px;
 
   height: 70px;
-  background: linear-gradient(black,#4c4c4c, transparent);
+  background-color: black;
   color: white;
   padding-top: 30px;
   display: flex;
@@ -126,9 +128,7 @@ export default class Nav extends Component{
           <DropDown>
             <DropButton>Dropdown</DropButton>
             <DropdownHolder>
-              <Text><TextFont>Link 1</TextFont></Text>
-              <Text><TextFont>Link 2</TextFont></Text>
-              <Text><TextFont>Link 3</TextFont></Text>
+              <Text><TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont></Text>
             </DropdownHolder>
           </DropDown>
         </Right>
