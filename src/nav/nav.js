@@ -2,40 +2,40 @@ import React,{Component} from 'react';
 import styled from '@emotion/styled';
 
 const Navcontainer = styled.div`
-  height:100px;
-  background:linear-gradient(black,#4c4c4c, transparent);
-  color:white;
-  padding-top:30px;
+  height: 70px;
+  background: linear-gradient(black,#4c4c4c, transparent);
+  color: white;
+  padding-top: 30px;
   display: flex;
 `;
 
 const NameHolder=styled.div`
-  width:300px;
+  width: 300px;
 `;
 const MyName = styled.h1`
-  margin:0 0 0 40px;
+  margin: 0 0 0 40px;
   font-size: 30px
-  width:200px;
+  width: 200px;
 `;
 
 const LinkHolder = styled.div`
-  position:absolute;
-  right:0;
+  position: absolute;
+  right: 0;
   display: block;
   padding-top: 10px;
   padding-right: 70px;
 `;
 const Links = styled.button`
-  float:Right;
+  float: Right;
   background: transparent;
   border: 0;
   text-decoration: none;
-  color:white;
+  color: white;
   padding-left: 30px;
-  font-size:16px;
+  font-size: 16px;
   
   &:hover{
-    font-size:18px;
+    font-size: 18px;
   }
 `;
 
