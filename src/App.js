@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 import Outside from './activity/outside/outside';
 import Nav from './nav/nav';
 import Inside from './activity/inside/inside'
-import Intro from './HomePage/Intro';
+import Intro from './homepage/intro'
 
 export default class App extends Component{
   
