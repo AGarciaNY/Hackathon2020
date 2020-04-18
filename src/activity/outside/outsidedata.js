@@ -15,10 +15,10 @@ class Projects {
   }
 }
 
-let outsideactivitys = [
-   new Projects("testing",["Aldair"],"hi there out","https://agarciany.github.io/piglaten/","https://i.imgur.com/CScNoZw.pngs"),
+let insideactivitys = [
+   new Projects("testing",["Aldair"],"ho there","https://agarciany.github.io/piglaten/","https://i.imgur.com/CScNoZw.pngs"),
 
 ];
-console.log(outsideactivitys);
-export default outsideactivitys;
+console.log(insideactivitys);
+export default insideactivitys;
   
