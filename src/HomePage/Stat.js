@@ -41,6 +41,11 @@ class Stat extends Component{
             });
         });
 
+        fetch('https://www.eventbriteapi.com/v3/events/search/')
+        .then((data)=>{
+            console.log(data);
+        });
+
     }
 }
 
