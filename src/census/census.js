@@ -38,10 +38,10 @@ export default class Census extends Component {
         <Textholder>
         <h1>why you should fill out the censes</h1>
         <Points>
-        <p>It somethong that afects everyone in the comunity</p>
-        <p>it give money to the comunity for schools and other things</p>
-        <p>it will benifit us all</p>
-        <h3>Its safe.<b> It does not ask for your status</b></h3>
+          <p>It affects everyone in the community</p>
+          <p>it helps the community grow</p>
+          <p>it will benefit us all</p>
+          <p>It’s safe. It does not ask for your status</p>
         </Points>
         <Button href="https://my2020census.gov/" target="_blank">Click here to start</Button>
         </Textholder>
