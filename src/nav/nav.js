@@ -13,20 +13,19 @@ const Navcontainer = styled("header")`
   background-color: black;
   color: white;
   display: flex;
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 1000px) {
     position: static;
-    height:150px;
-    div{
-      position:relative;
-      top:-20px;
-    }
+    height:150px;img
   }
 `;
 
 const LogoStyle = styled.img`
-  position:relative;
+  position:absolute;
   top:10px;
   left:10px;
+  @media only screen and (max-width: 1000px) {
+    left:75px;
+  }
 `;
 
 const NameHolder=styled.div`
@@ -35,15 +34,25 @@ const NameHolder=styled.div`
   padding-bottom: 20px
 `;
 const MyName = styled.h1`
+  position:absolute;
+  top:25px;
+  left:55px;
   margin: 0 0 0 40px;
   font-size: 30px
   width: 200px;
+  @media only screen and (max-width: 1000px) {
+    left:-10px;
+    top:85px;
+  }
 `;
 
 const LinkHolder = styled.div`
   position: absolute;
   top:35px;
   right: 50px;
+  @media only screen and (max-width: 1000px) {
+    top:100px;
+  }
 `;
 const Links = styled.button`
   background: transparent;
@@ -62,8 +71,8 @@ const DropDown = styled.div`
   height:50px;
   width: 50px;
   position: absolute;
-  right: -70px;
   top:0;
+  right:-70px;
 `;
 
 const DropButton = styled.div`
@@ -83,8 +92,15 @@ const SecondHolder =styled.div`
 position:relative;
 left:-100px;
 `;
+
 const Audio = styled.audio`
- 
+  z-index: 20;
+  position: absolute;
+  left:30%;
+  top:20px;
+  @media only screen and (max-width: 1000px) {
+    left:200px;
+  }
 `;
 
 const TextFont = styled.button`
@@ -117,29 +133,29 @@ export default class Nav extends Component{
   render(){
 
     return(
-
-    <Navcontainer>
-      <NameHolder>
-        <LogoStyle className="App-logo" src={Virus} alt={Virus}/>
-        <MyName>Anti Covid</MyName>
-      </NameHolder>
-      <Audio controls autoplay loop>
-        <source src="space.mp3" type="audio/mp3"/>  
-      </Audio>
-      <LinkHolder>
-        <SecondHolder>
-          <Links onClick={() => this.props.changepage('home')}>Home</Links>
-          <Links onClick={() => this.props.changepage('Inside')}>Inside</Links>
-          <Links onClick={() => this.props.changepage('Outside')}>Outside</Links>
-          <DropDown>
-            <DropButton>
-              <p>Dropdown</p>
-              <TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont>
-            </DropButton>
-          </DropDown>
-        </SecondHolder>
-      </LinkHolder>
-    </Navcontainer>
+        
+        <Navcontainer>
+          <NameHolder>
+            <LogoStyle className="App-logo" src={Virus} alt={Virus}/>
+            <MyName>Anti Covid</MyName>
+          </NameHolder>
+            <Audio controls autoplay loop>
+              <source src="space.mp3" type="audio/mp3"/>  
+            </Audio>
+          <LinkHolder>
+            <SecondHolder>
+              <Links onClick={() => this.props.changepage('home')}>Home</Links>
+              <Links onClick={() => this.props.changepage('Inside')}>Inside</Links>
+              <Links onClick={() => this.props.changepage('Outside')}>Outside</Links>
+              <DropDown>
+                <DropButton>
+                  <p>Dropdown</p>
+                  <TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont>
+                </DropButton>
+              </DropDown>
+            </SecondHolder>
+          </LinkHolder>
+        </Navcontainer>
     );
   }
 
