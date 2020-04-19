@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import styled from '@emotion/styled';
+import Virus from '../Icons/Virus.png';
 
 const Navcontainer = styled("header")`
   position: sticky;
@@ -15,8 +16,14 @@ const Navcontainer = styled("header")`
   display: flex;
 `;
 
+const logoStyle={
+  padding: "10px",
+}
+
 const NameHolder=styled.div`
-  width: 300px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px
 `;
 const MyName = styled.h1`
   margin: 0 0 0 40px;
@@ -121,6 +128,7 @@ export default class Nav extends Component{
 
     <Navcontainer>
       <NameHolder>
+        <img className="App-logo" src={Virus} style={logoStyle}/>
         <MyName>Antai Covid</MyName>
       </NameHolder>
       <LinkHolder>
