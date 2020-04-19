@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 function readOutLoud(message){
-    console.log(message);
+    //console.log(message);
     let speech = new SpeechSynthesisUtterance();
-    console.log(speech);
+    //console.log(speech);
     speech.text = message;
 
     if(message === "home"){
