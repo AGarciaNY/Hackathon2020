@@ -52,8 +52,8 @@ class Intro extends Component {
       <div>
         <div style={styles}>
           <Heading content="The fight against corona"/>
-          <Description content="A week long Hackathon project made by [place names here later]. We seek to provide relief for those
-              suffering through these tough times one way or another"/>
+          <Description content="A week long Hackathon project made by Jason Alvarez, Aldair Garcia, Talia Jeffery. We seek to provide relief for those
+              suffering through these tough times one way or another. We hope you find something that can better your day through our site!"/>
           <div className="container" style={container}>
             <ActivityBtn  onClick={()=> this.props.changepage('Inside')}>Indoor</ActivityBtn>
             <ActivityBtn  onClick={()=> this.props.changepage('Outside')}>Outdoor</ActivityBtn>
