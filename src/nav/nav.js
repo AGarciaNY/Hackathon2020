@@ -67,7 +67,7 @@ const DropButton = styled.button`
   color:white;
   min-width: 140px;
   font-size:16px;
-
+  margin-bottom:40px;
   &:hover{
     font-size:18px;
   }
@@ -82,6 +82,7 @@ const DropdownHolder=styled.div`
 `;
 
 const TextFont = styled.button`
+  position:absolute;
   display: block;
   background:silver;
   width: 140px;
@@ -91,10 +92,11 @@ const TextFont = styled.button`
   text-decoration: none;
   color:white;
   font-size:15px;
+  top:-40px;
 
   &:hover{
-    position:absolute;
-    top:-5px;
+    
+    top:-45px;
     left:-10px;
     width: 160px;
     height:40px;
