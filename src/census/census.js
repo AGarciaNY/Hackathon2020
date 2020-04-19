@@ -36,7 +36,7 @@ export default class Census extends Component {
     return (
       <Holder>
         <Textholder>
-        <h1>Why You Should Fill Out The Censes</h1>
+        <h1>Why You Should Fill Out The Census</h1>
         <Points>
           <p>It affects everyone in the community</p>
           <p>it helps the community grow</p>
