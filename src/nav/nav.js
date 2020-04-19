@@ -15,7 +15,11 @@ const Navcontainer = styled("header")`
   display: flex;
   @media only screen and (max-width: 1000px) {
     position: static;
-    height:150px;img
+    height:150px;
+  }
+  @media only screen and (max-width: 600px) {
+    position: static;
+    height:200px;
   }
 `;
 
@@ -52,6 +56,10 @@ const LinkHolder = styled.div`
   right: 50px;
   @media only screen and (max-width: 1000px) {
     top:100px;
+  }
+  @media only screen and (max-width: 600px) {
+    top:150px;
+    left:100px;
   }
 `;
 const Links = styled.button`
