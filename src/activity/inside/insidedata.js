@@ -57,7 +57,7 @@ async function content(){
   .then((response)=>{
       // console.log("articles to read",response.results);
       for(let i=0; i<response.results.length;i++){
-        insideactivitys.push(new Projects(response.results[i].title, ["Jason"], response.results[i].abstract, response.results[i].url, response.results[i].multimedia[0].url));
+        insideactivitys.push(new Projects(response.results[i].title, ["Jason"], response.results[i].abstract, response.results[i].url, NewYorkTimesLogo));
       }
       return response.results;
   });
