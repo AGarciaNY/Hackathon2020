@@ -17,7 +17,6 @@ class Projects {
 
 
 async function content(){
-  console.log("running async function");
 
   fetch("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=volunteer&api-key=lI4WHMHoiOnZHoJwYyLmqAHuHs4IZZN8")
   .then((data)=>{
@@ -39,6 +38,5 @@ async function content(){
 content();
 
 let insideactivitys = [];
-console.log(insideactivitys);
 export default insideactivitys;
   

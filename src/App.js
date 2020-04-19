@@ -15,11 +15,9 @@ export default class App extends Component{
   }
 
   pickAPage = (page) => {
-    console.log('clicked')
     this.setState({
       pickapage: page
     });
-    console.log(this.state.pickapage)
   }
   render(){
     if(this.state.pickapage === 'home'){

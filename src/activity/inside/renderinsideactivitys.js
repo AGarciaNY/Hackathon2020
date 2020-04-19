@@ -76,7 +76,6 @@ class Insideactivityslist extends React.Component {
       let infodata=insideactivitys[i].info;
       let imagelink=insideactivitys[i].image;
 
-      console.log(imagelink);
 
       namesLiList.push(
         <Holder key={i}>

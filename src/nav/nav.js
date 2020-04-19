@@ -53,55 +53,48 @@ const Links = styled.button`
 `;
 
 const DropDown = styled.div`
-  padding-left: 30px;
-  
-  &:hover div{
-    display: block;
-  }
+  padding-left:30px;
+  position:relative;
+  left:30px;
+  height:50px;
+  width: 50px;
+
 `;
 
-const DropButton = styled.button`
-  background-color: transparent;
-  padding: 0;
-  border: none;
+const DropButton = styled.div`
+
+  position:relative;
+  left:-30px;
   color:white;
-  min-width: 140px;
-  font-size:16px;
-  margin-bottom:40px;
+  width: 80px;
+  p{  
+    font-size:16px;
+    margin:0;
+    
+  }
   &:hover{
-    font-size:18px;
+    button{
+      visibility: visible;
+    }
   }
 `;
 
-const DropdownHolder=styled.div`
-  display: none;
-  background:transparent;
-  min-width: 140px;
-  border-radius: 20px;
-  padding:8px 0 0;
+const Audio = styled.audio`
+  position:relative;
+  left:-200px;
 `;
 
 const TextFont = styled.button`
-  position:absolute;
-  display: block;
+  visibility: hidden;
+  position:relative;
+  left:-30px;
   background:silver;
   width: 140px;
   height:30px;
-  z-index: 2;
   border-radius: 20px;
-  text-decoration: none;
-  color:white;
+  color:black;
   font-size:15px;
-  top:-40px;
 
-  &:hover{
-    
-    top:-45px;
-    left:-10px;
-    width: 160px;
-    height:40px;
-    font-size:18px;
-  }
 `;
 
 const Right=styled.li`
@@ -109,45 +102,49 @@ const Right=styled.li`
   float:right;
 `;
 
-const Text = styled.div`
-  width: 140px;
-  height:30px;
-  margin:3px 0;
-  position:relative;
-  z-index:2;
-
-  &:hover{
-    margin:5px 0;
-    
-  }
-`;
 
 export default class Nav extends Component{
-
+  constructor() {
+    super();
+    this.state = {
+      play: 'play',
+    }
+  }
+  musicplay=(pon)=>{
+    this.setState({
+      play:pon
+    });
+  }
   render(){
 
     return(
 
     <Navcontainer>
       <NameHolder>
-        <img className="App-logo" src={Virus} style={logoStyle}/>
+        <img className="App-logo" src={Virus} alt={Virus}style={logoStyle}/>
         <MyName>Antai Covid</MyName>
       </NameHolder>
       <LinkHolder>
         <Right>
           <DropDown>
-            <DropButton>Dropdown</DropButton>
-            <DropdownHolder>
-              <Text><TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont></Text>
-            </DropdownHolder>
+            <DropButton>
+              <p>Dropdown</p>
+              <TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont>
+              
+            </DropButton>
+            
           </DropDown>
         </Right>
+        <Audio controls autoplay loop>
+                <source src="space.mp3" type="audio/mp3"/>  
+              </Audio>
         <Right>
           <Links onClick={() => this.props.changepage('Outside')}>Outside</Links>
           <Links onClick={() => this.props.changepage('Inside')}>Inside</Links>
           <Links onClick={() => this.props.changepage('home')}>Home</Links>
         </Right>
       </LinkHolder>
+      
     </Navcontainer>
     );
   }
