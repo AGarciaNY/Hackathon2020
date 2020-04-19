@@ -130,7 +130,7 @@ export default class Nav extends Component{
 
     <Navcontainer>
       <NameHolder>
-        <img className="App-logo" src={Virus} style={logoStyle}/>
+        <img className="App-logo" src={Virus} style={logoStyle} alt="."/>
         <MyName>Antai Covid</MyName>
       </NameHolder>
       <LinkHolder>

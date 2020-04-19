@@ -5,6 +5,7 @@ import Nav from './nav/nav';
 import Inside from './activity/inside/inside';
 import Intro from './home/home';
 import Census from './census/census';
+import HelpBtn from './HelpBtn';
 export default class App extends Component{
   
   constructor() {
@@ -27,6 +28,7 @@ export default class App extends Component{
         <div id="body">
           <Nav changepage={(page)=> this.pickAPage(page)}/>
           <Intro changepage={(page)=> this.pickAPage(page)}/>
+          <HelpBtn page={this.state.pickapage}/>
         </div>
       )
     }
@@ -36,6 +38,7 @@ export default class App extends Component{
         <div id="body">
           <Nav changepage={(page)=> this.pickAPage(page)}/>
           <Outside />
+          <HelpBtn page={this.state.pickapage}/>
         </div>
       )
     }
@@ -45,6 +48,7 @@ export default class App extends Component{
         <div id="body">
           <Nav changepage={(page)=> this.pickAPage(page)}/>
           <Inside />
+          <HelpBtn page={this.state.pickapage}/>
         </div>
       )
     }
