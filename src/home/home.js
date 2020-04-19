@@ -4,6 +4,10 @@ import styled from '@emotion/styled';
 import Heading from "./Heading";
 import Description from './Description';
 
+import Jason from "../Icons/JsIcon.png";
+import Aldair from "../Icons/AGIcon.png";
+import Talia from "../Icons/TJIcon.png";
+
 import MiniHeading from './MiniHeading';
 import MiniDesc from './MiniDesc';
 import Stat from './Stat';
@@ -48,6 +52,34 @@ class Intro extends Component {
       color: "white"
     }
 
+    let containerStyle={
+      display: "flex",
+      alignItems: "center",
+      marginLeft: "30%",
+    }
+
+    let imgContainer={ 
+      width: "100px",
+      height: "100px",
+      paddingBottom: "100px",
+      marginRight: "0px",
+      margin: "3%",
+    }
+
+    let profStyle={
+      borderRadius: "50%",
+      width: "100px",
+      height: "100px",
+      backgroundColor: "white",
+      WebkitBoxShadow: "10px 10px 60px 12px rgba(0,0,0,0.75)",
+    }
+
+    let profImg={
+      width: "100px",
+      height: "100px",
+      borderRadius: "50%",
+    }
+
     return (
       <div>
         <div style={styles}>
@@ -70,6 +102,28 @@ class Intro extends Component {
           <MiniHeading content="Team"/>
           <MiniDesc content="Our team is composed of Jason Alvarez, Aldair Garcia, Talia Jeffery and a big thanks to Ye Paing for his assistance 
           in this project!"/>
+          <div style={containerStyle}>
+            
+            <div style={imgContainer}>
+              <div style={profStyle}>
+                <img style={profImg} src={Jason} alt="Jason"/>
+                <title>Jason Alvarez</title>
+              </div>
+            </div>
+            <div style={imgContainer}>
+              <div style={profStyle}>
+                <img style={profImg} src={Aldair} alt="Aldair"/>
+                <title>Aldair Garcia</title>
+              </div>
+            </div>
+            <div style={imgContainer}>
+              <div style={profStyle}>
+                <img style={profImg} src={Talia} alt="Talia"/>
+                <title>Talia Jeffery</title>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     );
