@@ -9,16 +9,24 @@ const Navcontainer = styled("header")`
   border:2px solid blue;
   border-radius: 4px;
 
-  height: 70px;
+  height: 100px;
   background-color: black;
   color: white;
-  padding-top: 30px;
   display: flex;
+  @media only screen and (max-width: 1000px) {
+    position: static;
+    height:150px;img
+  }
 `;
 
-const logoStyle={
-  padding: "10px",
-}
+const LogoStyle = styled.img`
+  position:absolute;
+  top:10px;
+  left:10px;
+  @media only screen and (max-width: 1000px) {
+    left:75px;
+  }
+`;
 
 const NameHolder=styled.div`
   display: flex;
@@ -26,20 +34,27 @@ const NameHolder=styled.div`
   padding-bottom: 20px
 `;
 const MyName = styled.h1`
+  position:absolute;
+  top:25px;
+  left:55px;
   margin: 0 0 0 40px;
   font-size: 30px
   width: 200px;
+  @media only screen and (max-width: 1000px) {
+    left:-10px;
+    top:85px;
+  }
 `;
 
 const LinkHolder = styled.div`
   position: absolute;
-  right: 0;
-  display: block;
-  padding-top: 10px;
-  padding-right: 70px;
+  top:35px;
+  right: 50px;
+  @media only screen and (max-width: 1000px) {
+    top:100px;
+  }
 `;
 const Links = styled.button`
-  float: Right;
   background: transparent;
   border: 0;
   text-decoration: none;
@@ -53,20 +68,15 @@ const Links = styled.button`
 `;
 
 const DropDown = styled.div`
-  padding-left:30px;
-  position:relative;
-  left:30px;
   height:50px;
   width: 50px;
-
+  position: absolute;
+  top:0;
+  right:-70px;
 `;
 
 const DropButton = styled.div`
-
-  position:relative;
-  left:-30px;
   color:white;
-  width: 80px;
   p{  
     font-size:16px;
     margin:0;
@@ -78,10 +88,19 @@ const DropButton = styled.div`
     }
   }
 `;
+const SecondHolder =styled.div`
+position:relative;
+left:-100px;
+`;
 
 const Audio = styled.audio`
-  position:relative;
-  left:-200px;
+  z-index: 20;
+  position: absolute;
+  left:30%;
+  top:20px;
+  @media only screen and (max-width: 1000px) {
+    left:200px;
+  }
 `;
 
 const TextFont = styled.button`
@@ -97,10 +116,6 @@ const TextFont = styled.button`
 
 `;
 
-const Right=styled.li`
-  list-style-type:none;
-  float:right;
-`;
 
 
 export default class Nav extends Component{
@@ -118,35 +133,29 @@ export default class Nav extends Component{
   render(){
 
     return(
-
-    <Navcontainer>
-      <NameHolder>
-        <img className="App-logo" src={Virus} alt={Virus} style={logoStyle}/>
-
-        <MyName>Anti Covid</MyName>
-      </NameHolder>
-      <LinkHolder>
-        <Right>
-          <DropDown>
-            <DropButton>
-              <p>Dropdown</p>
-              <TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont>
-              
-            </DropButton>
-            
-          </DropDown>
-        </Right>
-        <Audio controls autoplay loop>
-                <source src="space.mp3" type="audio/mp3"/>  
-              </Audio>
-        <Right>
-          <Links onClick={() => this.props.changepage('Outside')}>Outside</Links>
-          <Links onClick={() => this.props.changepage('Inside')}>Inside</Links>
-          <Links onClick={() => this.props.changepage('home')}>Home</Links>
-        </Right>
-      </LinkHolder>
-      
-    </Navcontainer>
+        
+        <Navcontainer>
+          <NameHolder>
+            <LogoStyle className="App-logo" src={Virus} alt={Virus}/>
+            <MyName>Anti Covid</MyName>
+          </NameHolder>
+            <Audio controls autoplay loop>
+              <source src="space.mp3" type="audio/mp3"/>  
+            </Audio>
+          <LinkHolder>
+            <SecondHolder>
+              <Links onClick={() => this.props.changepage('home')}>Home</Links>
+              <Links onClick={() => this.props.changepage('Inside')}>Inside</Links>
+              <Links onClick={() => this.props.changepage('Outside')}>Outside</Links>
+              <DropDown>
+                <DropButton>
+                  <p>Dropdown</p>
+                  <TextFont onClick={() => this.props.changepage('Census')}>Census</TextFont>
+                </DropButton>
+              </DropDown>
+            </SecondHolder>
+          </LinkHolder>
+        </Navcontainer>
     );
   }
 

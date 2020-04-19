@@ -10,11 +10,12 @@ const Image = styled.img`
   width:180px;
 `;
 
-const Titel = styled.p`
-  position: relitive;
+const Titel = styled.h1`
   color: white;
   font-weight: bold;
   margin: 0;
+  font-size:18px;
+  text-align: center;
   `;
 
 
@@ -33,28 +34,50 @@ const Button1 = styled.a`
 
 const Holder =styled.div`
   margin: 30px;
-  width: 40%;
+  width: 650px;
   height: 200px;
   background: #353535;
   border-radius: 30px;
   position: relative ;
-
+  @media only screen and (max-width: 700px) {
+    height: 450px;
+    width:400px;
+    img {
+      height:120px;
+      width:140px;
+      top:20px;
+      left:30%;
+    }
+    div {
+      position: relative;
+      left:10px;
+      top:160px;
+      width:370px;
+      h1{
+        font-size:18px;
+      }
+      p{
+        font-size:16px;
+      }
+    }
+  }
 `;
 
 const InformationHolder = styled.div`
-  position: absolute;
+  position: relative;
   top: 30px;
   left: 220px;
-  width: 300px;
+  margin:0 10px 0;
+  width:400px;
 `;
 
 const Data = styled.p`
-  position: relitive;
+  position: relative;
+  top:10px;
   color: white;
   font-size: 12px;
   text-indent: 20px;
   padding: 0 10px 0;
-  width: 280px;
   margin:0;
 `;
 
