@@ -77,6 +77,5 @@ content();
 
 
 let insideactivitys = [];
-console.log(insideactivitys);
 export default insideactivitys;
   
