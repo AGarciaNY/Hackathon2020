@@ -84,7 +84,7 @@ class Intro extends Component {
       <div>
         <div style={styles}>
           <Heading content="The fight against corona"/>
-          <Description content="A week long Hackathon project made by Jason Alvarez, Aldair Garcia, Talia Jeffery. We seek to provide relief for those
+          <Description content="A week long Hackathon project made by Jason Alvarez, Aldair Garcia, Talia Jeffrey. We seek to provide relief for those
               suffering through these tough times one way or another. We hope you find something that can better your day through our site!"/>
           <div className="container" style={container}>
             <ActivityBtn  onClick={()=> this.props.changepage('Inside')}>Indoor</ActivityBtn>
@@ -119,7 +119,7 @@ class Intro extends Component {
             <div style={imgContainer}>
               <div style={profStyle}>
                 <img style={profImg} src={Talia} alt="Talia"/>
-                <title>Talia Jeffery</title>
+                <title>Talia Jeffrey</title>
               </div>
             </div>
 
