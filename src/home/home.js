@@ -100,7 +100,7 @@ class Intro extends Component {
             or outdoors, we'll give you things to do! With the world the way it currently is, there is no better time to improve 
             yourself or help others. Don't waste your time and do something today!"/>
           <MiniHeading content="Team"/>
-          <MiniDesc content="Our team is composed of Jason Alvarez, Aldair Garcia, Talia Jeffery and a big thanks to Ye Paing for his assistance 
+          <MiniDesc content="Our team is composed of Jason Alvarez, Aldair Garcia, Talia Jeffrey and a big thanks to Ye Paing for his assistance 
           in this project!"/>
           <div style={containerStyle}>
             
