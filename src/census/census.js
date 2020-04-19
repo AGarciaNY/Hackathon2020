@@ -25,7 +25,7 @@ const Holder =styled.div`
 `;
 const Textholder =styled.div`
   position:relative;
-  left:40px;
+  padding:40px;
 `;
 const Points =styled.div`
   position:relative; 
@@ -36,7 +36,7 @@ export default class Census extends Component {
     return (
       <Holder>
         <Textholder>
-        <h1>why you should fill out the censes</h1>
+        <h1>Why You Should Fill Out The Censes</h1>
         <Points>
           <p>It affects everyone in the community</p>
           <p>it helps the community grow</p>

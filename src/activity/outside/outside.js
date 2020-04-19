@@ -23,7 +23,7 @@ export default class Outside extends Component{
   render(){
     return(
       <Div>
-        <Header>things to do outside</Header>
+        <Header>Things to do Outside</Header>
         <Image 
           alt="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRESl-GVB-ZbWdQ9i8m3OETQVBP4w7zN7YYWAItBEVlKMwX8MnF&usqp=CAU" 
           src={Virus}
