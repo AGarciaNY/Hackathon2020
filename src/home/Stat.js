@@ -21,7 +21,7 @@ class Stat extends Component{
         return(
             <div style={stat}>
                 <p>Comfirmed Cases: {this.state.infected}</p>
-                <p>Comfirmed Deathes: {this.state.deceased}</p>
+                <p>Comfirmed Deaths: {this.state.deceased}</p>
             </div>
 
         );
